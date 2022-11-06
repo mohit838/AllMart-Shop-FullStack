@@ -1,12 +1,9 @@
 import React from "react";
-import Header from "./../header/Header";
 
 const Footer = () => {
   return (
     <>
-      <div>
-        <Header />
-      </div>
+      <footer>Footer</footer>
     </>
   );
 };
