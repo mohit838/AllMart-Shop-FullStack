@@ -1,11 +1,12 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Home, Login, Register, Shop, Cart, CheckOut } from "../pages";
 
 const Routers = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Navigate to="home" />} />
         <Route path="home" element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="shop/:id" element={<Shop />} />
