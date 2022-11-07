@@ -1,0 +1,6 @@
+.productInfo h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 15px;
+}

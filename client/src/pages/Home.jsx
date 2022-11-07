@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Helmate from "../components/helmate/Helmate";
 import HeroImg from "./../assets/images/hero-img.png";
 import Services from "../services/Services";
+import ProductList from "../components/UI/ProductList";
 
 const Home = () => {
   const year = new Date().getFullYear();
@@ -56,6 +57,18 @@ const Home = () => {
         <Services />
 
         {/* Treanding Products */}
+        <section className="trendingProducts">
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+                <h2 className="sectionTitle">Trending Products</h2>
+              </Col>
+
+              {/* Products Lists */}
+              <ProductList />
+            </Row>
+          </Container>
+        </section>
       </Helmate>
     </>
   );
