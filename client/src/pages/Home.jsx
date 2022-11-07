@@ -1,10 +1,10 @@
 import React from "react";
 import "./../styles/home.css";
+import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
+import { motion } from "framer-motion";
 import Helmate from "../components/helmate/Helmate";
 import HeroImg from "./../assets/images/hero-img.png";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Home = () => {
   const year = new Date().getFullYear();
