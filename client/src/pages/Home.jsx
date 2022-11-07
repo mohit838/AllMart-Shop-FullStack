@@ -3,6 +3,8 @@ import "./../styles/home.css";
 import { Container, Row, Col } from "reactstrap";
 import Helmate from "../components/helmate/Helmate";
 import HeroImg from "./../assets/images/hero-img.png";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const year = new Date().getFullYear();
@@ -17,7 +19,10 @@ const Home = () => {
               <Col lg="6" md="6">
                 <div className="heroContent">
                   <p className="heroSubTitle">Trending in {year}</p>
-                  <h2>Create Minimalist and Modern</h2>
+                  <h2>
+                    Create Minimalist and Modern Outlooks For Your Home
+                    Decorations.
+                  </h2>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Harum exercitationem quos laudantium, minus necessitatibus
@@ -25,7 +30,14 @@ const Home = () => {
                     deleniti libero aspernatur provident reprehenderit
                     exercitationem, accusamus cumque.
                   </p>
-                  <button className="buyBtn">Buy Now</button>
+                  <motion.button
+                    className="buyBtn"
+                    whileTap={{
+                      scale: 1.2,
+                    }}
+                  >
+                    <Link to="/shop">Buy Now</Link>
+                  </motion.button>
                 </div>
               </Col>
 
