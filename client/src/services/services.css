@@ -1,0 +1,37 @@
+.serviceItems {
+  padding: 20px;
+  background: var(--card-bg-01);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.serviceItems span i {
+  font-size: 2.2rem;
+  background-color: var(--primary-color);
+  padding: 10px;
+  font-weight: 400 !important;
+  color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.serviceItems h3 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.serviceItems p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
