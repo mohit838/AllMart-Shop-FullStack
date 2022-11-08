@@ -9,6 +9,10 @@
   margin-top: 15px;
 }
 
+.productInfo a:hover {
+  color: inherit;
+}
+
 .productInfo span {
   font-size: 0.9rem;
 }

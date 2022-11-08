@@ -7,6 +7,7 @@ import Helmate from "../components/helmate/Helmate";
 import HeroImg from "./../assets/images/hero-img.png";
 import Services from "../services/Services";
 import ProductList from "../components/UI/ProductList";
+import products from "./../assets/data/products.js";
 
 const Home = () => {
   const year = new Date().getFullYear();
