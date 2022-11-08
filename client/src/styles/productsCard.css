@@ -1,6 +1,32 @@
+.productItems {
+  cursor: pointer;
+}
+
 .productInfo h3 {
   font-size: 1.2rem;
   color: var(--primary-color);
   font-weight: 600;
   margin-top: 15px;
+}
+
+.productInfo span {
+  font-size: 0.9rem;
+}
+s .productCardBottom,
+price {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.productCardBottom span i {
+  color: white;
+  background: var(--primary-color);
+  font-style: 1.2rem;
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
