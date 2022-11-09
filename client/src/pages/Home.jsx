@@ -8,9 +8,18 @@ import HeroImg from "./../assets/images/hero-img.png";
 import Services from "../services/Services";
 import ProductList from "../components/UI/ProductList";
 import products from "./../assets/data/products.js";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Home = () => {
+  const [data, setData] = useState(products);
+
   const year = new Date().getFullYear();
+
+  useEffect(() => {
+    const fiterProducts = products.filter((item) => item.category === "chair");
+    setData(fiterProducts);
+  }, []);
 
   return (
     <>
@@ -66,7 +75,7 @@ const Home = () => {
               </Col>
 
               {/* Products Lists */}
-              <ProductList />
+              <ProductList data={data} />
             </Row>
           </Container>
         </section>

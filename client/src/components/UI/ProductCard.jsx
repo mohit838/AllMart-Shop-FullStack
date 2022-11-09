@@ -1,11 +1,10 @@
 import React from "react";
 import "./../../styles/productsCard.css";
-import ProductImg from "./../../assets/images/arm-chair-01.jpg";
 import { motion } from "framer-motion";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const ProductCard = () => {
+const ProductCard = ({ item }) => {
   return (
     <>
       <Col lg="3" md="4">
@@ -13,18 +12,18 @@ const ProductCard = () => {
           <div className="productsImg">
             <motion.img
               whileHover={{ scale: "0.9" }}
-              src={ProductImg}
+              src={item.imgUrl}
               alt="product/img"
             />
           </div>
           <div className="p-2 productInfo">
             <h3 className="productsName">
-              <Link to="/shop/:id">Modern Arm Chair</Link>
+              <Link to={`/shop/${item.id}`}>{item.productName}</Link>
             </h3>
-            <span>Chair</span>
+            <span>{item.category}</span>
           </div>
           <div className="productCardBottom d-flex align-items-center justify-content-between p-2">
-            <span className="price">$123</span>
+            <span className="price">${item.price}</span>
             <motion.span
               whileTap={{
                 scale: "1.2",
