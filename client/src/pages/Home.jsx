@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./../styles/home.css";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
@@ -8,8 +8,8 @@ import HeroImg from "./../assets/images/hero-img.png";
 import Services from "../services/Services";
 import ProductList from "../components/UI/ProductList";
 import products from "./../assets/data/products.js";
-import { useState } from "react";
-import { useEffect } from "react";
+import CounterImg from "./../assets//images/counter-timer-img.png";
+import Clock from "../components/UI/Clock";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -96,6 +96,35 @@ const Home = () => {
 
               {/* Products Lists */}
               <ProductList data={bestSales} />
+            </Row>
+          </Container>
+        </section>
+
+        {/* Timer Section */}
+        <section className="timerCount">
+          <Container>
+            <Row>
+              <Col lg="6" md="6">
+                <div className="clockTopContent">
+                  <h1 className="text-white fs-6 mb-2">Limited Offers</h1>
+                  <h3 className="text-white fs-5 mb-2">Quality Armchair</h3>
+                </div>
+
+                {/* Clock */}
+                <Clock />
+
+                <motion.button
+                  whileTap={{
+                    scale: "1.2",
+                  }}
+                  className="buyBtn storeBtn"
+                >
+                  <Link to="/shop">Visit Store</Link>
+                </motion.button>
+              </Col>
+              <Col lg="6" md="6" className="text-end">
+                <img src={CounterImg} alt="spcial/product/img" />
+              </Col>
             </Row>
           </Container>
         </section>
