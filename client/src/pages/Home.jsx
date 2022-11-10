@@ -12,13 +12,19 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const Home = () => {
-  const [data, setData] = useState(products);
+  const [data, setData] = useState([]);
+  const [bestSales, setBestSales] = useState([]);
 
   const year = new Date().getFullYear();
 
   useEffect(() => {
     const fiterProducts = products.filter((item) => item.category === "chair");
+    const fiterBestProducts = products.filter(
+      (item) => item.category === "sofa"
+    );
+
     setData(fiterProducts);
+    setBestSales(fiterBestProducts);
   }, []);
 
   return (
@@ -28,7 +34,7 @@ const Home = () => {
           <Container>
             <Row>
               {/* Hero Content */}
-              <Col lg="6" md="6">
+              <Col lg="6" md="6" mb-2>
                 <div className="heroContent">
                   <p className="heroSubTitle">Trending in {year}</p>
                   <h2>
@@ -54,7 +60,7 @@ const Home = () => {
               </Col>
 
               {/* Hero Image */}
-              <Col lg="6" md="6">
+              <Col lg="6" md="6" mb-2>
                 <div className="heroImg">
                   <img src={HeroImg} alt="hero/img" />
                 </div>
@@ -76,6 +82,20 @@ const Home = () => {
 
               {/* Products Lists */}
               <ProductList data={data} />
+            </Row>
+          </Container>
+        </section>
+
+        {/* Best Sales */}
+        <section className="bestSales">
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+                <h2 className="sectionTitle">Best Sales</h2>
+              </Col>
+
+              {/* Products Lists */}
+              <ProductList data={bestSales} />
             </Row>
           </Container>
         </section>
