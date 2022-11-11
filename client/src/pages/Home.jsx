@@ -12,19 +12,36 @@ import CounterImg from "./../assets//images/counter-timer-img.png";
 import Clock from "../components/UI/Clock";
 
 const Home = () => {
-  const [data, setData] = useState([]);
+  const [trandingProd, setTrandingProd] = useState([]);
   const [bestSales, setBestSales] = useState([]);
+  const [mobileProd, setMobileProd] = useState([]);
+  const [wirelessProd, setWirelessProd] = useState([]);
+  const [watchProd, setWatchProd] = useState([]);
 
   const year = new Date().getFullYear();
 
   useEffect(() => {
-    const fiterProducts = products.filter((item) => item.category === "chair");
+    const fiterTrendingProducts = products.filter(
+      (item) => item.category === "chair"
+    );
     const fiterBestProducts = products.filter(
       (item) => item.category === "sofa"
     );
+    const fiterMobileProducts = products.filter(
+      (item) => item.category === "mobile"
+    );
+    const fiterWatchProducts = products.filter(
+      (item) => item.category === "watch"
+    );
+    const fiterWirelessProducts = products.filter(
+      (item) => item.category === "wireless"
+    );
 
-    setData(fiterProducts);
+    setTrandingProd(fiterTrendingProducts);
     setBestSales(fiterBestProducts);
+    setMobileProd(fiterMobileProducts);
+    setWatchProd(fiterWatchProducts);
+    setWirelessProd(fiterWirelessProducts);
   }, []);
 
   return (
@@ -81,7 +98,7 @@ const Home = () => {
               </Col>
 
               {/* Products Lists */}
-              <ProductList data={data} />
+              <ProductList data={trandingProd} />
             </Row>
           </Container>
         </section>
@@ -125,6 +142,35 @@ const Home = () => {
               <Col lg="6" md="6" className="text-end">
                 <img src={CounterImg} alt="spcial/product/img" />
               </Col>
+            </Row>
+          </Container>
+        </section>
+
+        {/* New Arrival Section */}
+        <section className="newArrivals">
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center">
+                <h2 className="sectionTitle">New Arrivals</h2>
+              </Col>
+
+              {/* Products Lists */}
+              <ProductList data={mobileProd} />
+              <ProductList data={wirelessProd} />
+            </Row>
+          </Container>
+        </section>
+
+        {/* Popular Section */}
+        <section className="popularSection">
+          <Container>
+            <Row>
+              <Col lg="12" className="text-center mb-5">
+                <h2 className="sectionTitle">Popular Products</h2>
+              </Col>
+
+              {/* Products Lists */}
+              <ProductList data={watchProd} />
             </Row>
           </Container>
         </section>
