@@ -34,3 +34,19 @@ price {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+@media only screen and (max-width: 992px) {
+  .productInfo h3 a {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .productInfo h3 a {
+    font-size: 1rem;
+  }
+
+  .productCardBottom span i {
+    font-size: 1rem;
+  }
+}

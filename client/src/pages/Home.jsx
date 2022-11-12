@@ -61,9 +61,7 @@ const Home = () => {
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Harum exercitationem quos laudantium, minus necessitatibus
-                    quaerat praesentium eius ex, architecto magnam cumque! Cum
-                    deleniti libero aspernatur provident reprehenderit
-                    exercitationem, accusamus cumque.
+                    quaerat praesentium eius ex, architecto magnam cumque!
                   </p>
                   <motion.button
                     className="buyBtn"
@@ -120,8 +118,11 @@ const Home = () => {
         {/* Timer Section */}
         <section className="timerCount">
           <Container>
-            <Row>
-              <Col lg="6" md="6">
+            <Row
+              className="d-flex justify-content-center
+            "
+            >
+              <Col lg="6" md="12" className="countCol">
                 <div className="clockTopContent">
                   <h1 className="text-white fs-6 mb-2">Limited Offers</h1>
                   <h3 className="text-white fs-5 mb-2">Quality Armchair</h3>
@@ -139,7 +140,7 @@ const Home = () => {
                   <Link to="/shop">Visit Store</Link>
                 </motion.button>
               </Col>
-              <Col lg="6" md="6" className="text-end">
+              <Col lg="6" md="12" className="text-end counterImg">
                 <img src={CounterImg} alt="spcial/product/img" />
               </Col>
             </Row>

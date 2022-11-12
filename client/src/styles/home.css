@@ -63,3 +63,54 @@
 .storeBtn a:hover {
   color: var(--primary-color);
 }
+
+@media only screen and (max-width: 992px) {
+  .heroContent h2 {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .clockTopContent {
+    text-align: center;
+  }
+
+  .clockTopContent h4 {
+    font-size: 0.9rem !important;
+  }
+  .clockTopContent h3 {
+    font-size: 1rem !important;
+  }
+
+  .counterImg {
+    display: none;
+  }
+
+  .countCol {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heroContent h2 {
+    font-size: 1.6rem;
+  }
+
+  .heroContent p,
+  .buyBtn a {
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .heroContent {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}

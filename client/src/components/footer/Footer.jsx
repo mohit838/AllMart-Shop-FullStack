@@ -11,7 +11,7 @@ const Footer = () => {
       <footer className="footer">
         <Container>
           <Row>
-            <Col lg="4">
+            <Col lg="4" className="mb-4">
               {/* Logo */}
               <div className="logo">
                 <div>

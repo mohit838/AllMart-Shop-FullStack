@@ -35,3 +35,30 @@
   font-size: 0.9rem;
   color: #222;
 }
+
+@media only screen and (max-width: 992px) {
+  .serviceItems {
+    padding: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .serviceItems h3 {
+    font-size: 1rem;
+  }
+  .serviceItems span i {
+    padding: 5px;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .serviceItems span i {
+    padding: 5px;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .serviceItems {
+    padding: 20px;
+  }
+}
