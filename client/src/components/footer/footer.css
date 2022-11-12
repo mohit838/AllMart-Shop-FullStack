@@ -1,0 +1,34 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: var(--primary-color);
+}
+
+.quickLinkTitle {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.footerQuickLinks ul li {
+  background: transparent !important;
+}
+
+.footerQuickLinks ul li a {
+  color: white;
+}
+
+.footerContact ul li span {
+  font-size: 1.2rem;
+}
+
+.footerContact ul li p {
+  font-size: 0.9rem;
+}
+
+.footerCopyright {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}
